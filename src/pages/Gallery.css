@@ -1,0 +1,40 @@
+.gallery-page {
+    padding: 25px;
+}
+
+.gallery-page h2 {
+    color: #1e332f;
+}
+
+.gallery-page .art-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gallery-page .art-card {
+    width: auto;
+}
+
+.gallery-page .art-card img {
+    height: 230px;
+    padding: 8px;
+    border-radius: 15px;
+    background-color: #cacece;
+    object-fit: contain;
+}
+
+@media (max-width: 850px) {
+    .gallery-page .art-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 550px) {
+    .gallery-page {
+        padding: 18px;
+    }
+
+    .gallery-page .art-list {
+        grid-template-columns: 1fr;
+    }
+}

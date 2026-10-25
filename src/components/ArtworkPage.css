@@ -1,0 +1,99 @@
+.artwork-page {
+    padding: 25px;
+    border-right: 5px solid #bcd0c7;
+    border-left: 5px solid #bcd0c7;
+    background-color: #899998;
+    color: #1e332f;
+}
+
+.artwork-page h2 {
+    margin-top: 0;
+    font-family: "Sail", cursive;
+    font-size: 34px;
+}
+
+.artwork-page h3 {
+    margin-top: 28px;
+    font-size: 22px;
+}
+
+.artwork-page p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.artwork-page .artwork-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 750px;
+    margin: 35px auto;
+}
+
+.artwork-page .skateboard-gallery {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.artwork-page .skateboard-gallery .art-photo {
+    grid-column: span 2;
+    height: 235px;
+}
+
+.artwork-page .skateboard-gallery .art-photo:nth-child(n + 4) {
+    grid-column: span 3;
+    height: 420px;
+}
+
+.artwork-page .cat-gallery {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+    align-items: center;
+}
+
+.artwork-page .cat-sketches {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.artwork-page .cat-finished .art-photo {
+    height: auto;
+}
+
+.artwork-page .poster-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    max-width: 100%;
+    aspect-ratio: 2 / 3;
+    margin: 35px auto;
+    background-image: url("./images/3906af61-7328-4282-b3ea-3c5945069ffb.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.artwork-page .poster-frame .art-photo {
+    width: 84%;
+    height: 70%;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+@media (max-width: 700px) {
+    .artwork-page {
+        padding: 16px;
+    }
+
+    .artwork-page .artwork-gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 400px;
+    }
+
+    .artwork-page .skateboard-gallery .art-photo,
+    .artwork-page .skateboard-gallery .art-photo:nth-child(n + 4) {
+        grid-column: auto;
+        height: 340px;
+    }
+}

@@ -1,0 +1,10 @@
+.art-photo {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 340px;
+    padding: 10px;
+    border: 5px solid #bcd0c7;
+    background-color: #1e332f;
+    object-fit: contain;
+}

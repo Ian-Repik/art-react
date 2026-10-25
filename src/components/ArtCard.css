@@ -1,0 +1,39 @@
+.art-card {
+    width: 210px;
+    max-width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #e5e5e5;
+    text-align: center;
+}
+
+.art-card a {
+    color: #27433e;
+    text-decoration: none;
+}
+
+.art-card a:hover,
+.art-card a:focus-visible {
+    text-decoration: underline;
+}
+
+.art-card img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.art-card h3 {
+    margin: 12px 0;
+    font-family: "Sail", cursive;
+    font-size: 23px;
+}
+
+.art-card p {
+    color: #27433e;
+    font-size: 14px;
+    line-height: 1.5;
+}

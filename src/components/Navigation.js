@@ -1,21 +1,28 @@
+import { Link, useLocation } from "react-router-dom";
 import "./Navigation.css";
 
 function Navigation() {
+    const location = useLocation();
+
+    function handleHomeClick(event) {
+        if (location.pathname === "/") {
+            event.preventDefault();
+        }
+    }
+
     return (
         <nav className="main-nav">
             <ul>
                 <li>
-                    <a href="./">Home</a>
+                    <Link to="/" onClick={handleHomeClick}>
+                        Home
+                    </Link>
                 </li>
                 <li>
-                    <a href="https://ian-repik.github.io/csce-242/projects/gallery/index.html">
-                        Gallery
-                    </a>
+                    <Link to="/gallery">Gallery</Link>
                 </li>
                 <li>
-                    <a href="https://ian-repik.github.io/csce-242/projects/inprogress/index.html">
-                        In Progress
-                    </a>
+                    <Link to="/in-progress">In Progress</Link>
                 </li>
             </ul>
         </nav>
