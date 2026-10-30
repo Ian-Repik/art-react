@@ -1,6 +1,142 @@
+/* Art Cards */
+
+.art-card {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 12px;
+    box-sizing: border-box;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.art-card img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.art-card a {
+    font-family: "Sail", serif;
+    font-size: 22px;
+    color: #27433e;
+}
+
+.art-card h3 {
+    margin: 12px 0;
+}
+
+.art-card p {
+    line-height: 1.5;
+}
+
+/* Artwork Popup */
+
+.art-card .art-popup {
+    width: 70%;
+    max-width: 600px;
+    max-height: 85vh;
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    background-color: #e5e5e5;
+    color: #27433e;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.art-popup::backdrop {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.art-card .art-popup-content {
+    padding: 35px;
+}
+
+.art-card .art-popup h2 {
+    margin: 0 0 0.83em;
+    font-family: "Sail", serif;
+    font-size: 38px;
+    line-height: normal;
+}
+
+.art-card .art-popup h2 a {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: #27433e;
+    text-decoration: underline;
+    text-decoration-color: #27433e;
+}
+
+.art-card .art-popup .popup-description {
+    display: block;
+    margin: 0 0 18px;
+    color: #27433e;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.art-card .art-popup .popup-close-note {
+    display: block;
+    margin: 0;
+    color: #27433e;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.art-card .art-popup button {
+    display: none;
+}
+
+/* Smaller Screens */
+
+@media (max-width: 700px) {
+    .art-card .art-popup {
+        width: calc(100% - 28px);
+        max-width: 370px;
+        border-radius: 15px;
+    }
+
+    .art-card .art-popup-content {
+        padding: 22px 18px;
+    }
+
+    .art-card .art-popup h2 {
+        font-size: 30px;
+        line-height: 1.1;
+    }
+
+    .art-card .art-popup .popup-description {
+        font-size: 16px;
+        line-height: 1.45;
+    }
+}
 .art-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 25px;
+    justify-items: center;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .art-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .art-list {
+        grid-template-columns: 1fr;
+    }
 }

@@ -1,6 +1,11 @@
 .app-content {
-    width: 98%;
+    width: 90%;
     max-width: 1100px;
     margin: 0 auto;
-    background-color: #949b96;
+}
+
+@media (max-width: 700px) {
+    .app-content {
+        width: 98%;
+    }
 }
