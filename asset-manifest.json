@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/art-react/static/css/main.ec03283a.css",
-    "main.js": "/art-react/static/js/main.91be024c.js",
+    "main.css": "/art-react/static/css/main.64b1d326.css",
+    "main.js": "/art-react/static/js/main.1090b757.js",
     "static/media/3906af61-7328-4282-b3ea-3c5945069ffb.png": "/art-react/static/media/3906af61-7328-4282-b3ea-3c5945069ffb.11b587c33c4b547e4527.png",
     "static/media/Firefly_RemoveBackground.png": "/art-react/static/media/Firefly_RemoveBackground.9f00a61ae2fa2d23dcc9.png",
     "static/media/IMG_5872.jpg": "/art-react/static/media/IMG_5872.81b4f74015797f88d2a9.jpg",
@@ -34,11 +34,11 @@
     "static/media/IMG_2262.jpg": "/art-react/static/media/IMG_2262.eae3cc3dd9540dad4e96.jpg",
     "static/media/alien_cat.jpg": "/art-react/static/media/alien_cat.ba8a2af89080086315f3.jpg",
     "index.html": "/art-react/index.html",
-    "main.ec03283a.css.map": "/art-react/static/css/main.ec03283a.css.map",
-    "main.91be024c.js.map": "/art-react/static/js/main.91be024c.js.map"
+    "main.64b1d326.css.map": "/art-react/static/css/main.64b1d326.css.map",
+    "main.1090b757.js.map": "/art-react/static/js/main.1090b757.js.map"
   },
   "entrypoints": [
-    "static/css/main.ec03283a.css",
-    "static/js/main.91be024c.js"
+    "static/css/main.64b1d326.css",
+    "static/js/main.1090b757.js"
   ]
 }
