@@ -1,9 +1,10 @@
 import { useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./ArtCard.css";
 
 function ArtCard(props) {
     const popup = useRef(null);
+    const location = useLocation();
 
 function showPopup(event) {
     if (
@@ -14,16 +15,21 @@ function showPopup(event) {
     ) {
         return;
     }
-
+    if (location.pathname !== "/") {
+    return;
+    }
     event.preventDefault();
     popup.current.showModal();
 }
     return (
         <section className="art-card">
             <Link to={props.link} onClick={showPopup}>
-                <img src={props.image} alt={props.alt} />
-                <h3>{props.title}</h3>
+    <img src={props.image} alt={props.alt} />
             </Link>
+
+            <h3>
+                <Link to={props.link}>{props.title}</Link>
+            </h3>
 
             <p>{props.medium}</p>
             <p>{props.description}</p>
@@ -53,7 +59,7 @@ function showPopup(event) {
         </h2>
 
         <p className="popup-description">
-            {props.description}
+             {props.popupDescription || props.description}
         </p>
 
         <button
