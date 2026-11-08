@@ -1,0 +1,72 @@
+.grain-glow-page {
+    padding: 25px;
+    background-color: #899998;
+    color: #1e332f;
+}
+
+.grain-glow-page h2,
+.grain-glow-page h3 {
+    color: #1e332f;
+}
+
+.grain-glow-page .progress-intro {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #cacece;
+    color: #1e332f;
+    font-family: "Sail", cursive;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Finished photos */
+.grain-glow-page .finished-artwork {
+    margin: 30px 0;
+}
+
+.grain-glow-page .finished-photos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+.grain-glow-page .finished-photos .art-photo {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+/* Construction photos */
+.grain-glow-page .progress-photos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    background-color: #cacece;
+}
+
+.grain-glow-page .progress-photos .art-photo {
+    height: 260px;
+}
+
+/* Smaller screens */
+@media (max-width: 700px) {
+    .grain-glow-page {
+        padding: 18px;
+    }
+
+    .grain-glow-page .finished-photos {
+        grid-template-columns: 1fr;
+    }
+
+    .grain-glow-page .progress-photos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 450px) {
+    .grain-glow-page .progress-photos {
+        grid-template-columns: 1fr;
+    }
+}

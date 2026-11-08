@@ -1,45 +1,33 @@
-.in-progress-page {
-    padding: 25px;
+.coming-soon-page {
+    padding: 60px 20px;
     background-color: #899998;
 }
 
-.in-progress-page h2 {
+.coming-soon-card {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 40px 25px;
+    border-radius: 15px;
+    background-color: #e5e5e5;
     color: #1e332f;
-}
-
-.in-progress-page .progress-intro {
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: #cacece;
-    color: #1e332f;
-    font-family: "Sail", cursive;
-    font-size: 20px;
-    line-height: 1.5;
     text-align: center;
 }
 
-.in-progress-page .progress-photos {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
+.coming-soon-card h2 {
+    font-family: "Sail", cursive;
+    font-size: 40px;
 }
 
-.in-progress-page .progress-photos .art-photo {
-    height: 260px;
+.coming-soon-card p {
+    line-height: 1.6;
 }
 
-@media (max-width: 700px) {
-    .in-progress-page {
-        padding: 18px;
-    }
-
-    .in-progress-page .progress-photos {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 450px) {
-    .in-progress-page .progress-photos {
-        grid-template-columns: 1fr;
-    }
+.coming-soon-card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background-color: #27433e;
+    color: white;
+    text-decoration: none;
 }

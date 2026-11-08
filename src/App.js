@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Gallery from "./pages/Gallery";
 import InProgress from "./pages/InProgress";
+import GrainAndGlow from "./pages/GrainAndGlow";
 import RelicsAndRelief from "./pages/RelicsAndRelief";
 import SquidSlab from "./pages/SquidSlab";
 import AlienSkateboard from "./pages/AlienSkateboard";
@@ -22,12 +23,14 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/gallery" element={<Gallery />} />
+                    
                     <Route path="/in-progress" element={<InProgress />} />
                     <Route path="/relics-and-relief" element={<RelicsAndRelief />} />
                     <Route path="/squid-slab" element={<SquidSlab />} />
                     <Route path="/alien-skateboard" element={<AlienSkateboard />} />
                     <Route path="/skeleton-poster" element={<SkeletonPoster />} />
                     <Route path="/alien-cat" element={<AlienCat />} />
+                    <Route path="/grain-and-glow" element={<GrainAndGlow />} />
                 </Routes>
 
                 <Footer />

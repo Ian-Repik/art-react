@@ -70,7 +70,7 @@ function ArtList() {
                 title="Grain and Glow"
                 image={grain}
                 alt="Grain and Glow sculpture"
-                link="/in-progress"
+                link="/grain-and-glow"
                 medium="Light sculpture"
                 year="2025"
                 description="A light sculpture I am still working on using a green traffic light and a repeating box shape."
