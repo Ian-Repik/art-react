@@ -44,13 +44,17 @@ function Navigation() {
                         Gallery
                     </Link>
                 </li>
-
+                <li>
+                    <Link to="/admin" onClick={() => setMenuOpen(false)}>
+                        Manage Art
+                    </Link>
+                    </li>
                 <li>
                     <Link
-                        to="/in-progress"
+                        to="/coming-soon"
                         onClick={() => setMenuOpen(false)}
                     >
-                        In Progress
+                        Coming Soon
                     </Link>
                 </li>
             </ul>

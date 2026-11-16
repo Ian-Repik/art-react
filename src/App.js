@@ -13,6 +13,7 @@ import SquidSlab from "./pages/SquidSlab";
 import AlienSkateboard from "./pages/AlienSkateboard";
 import SkeletonPoster from "./pages/SkeletonPoster";
 import AlienCat from "./pages/AlienCat";
+import Admin from "./pages/Admin";
 
 function App() {
     return (
@@ -23,14 +24,15 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/gallery" element={<Gallery />} />
-                    
-                    <Route path="/in-progress" element={<InProgress />} />
+            
                     <Route path="/relics-and-relief" element={<RelicsAndRelief />} />
                     <Route path="/squid-slab" element={<SquidSlab />} />
                     <Route path="/alien-skateboard" element={<AlienSkateboard />} />
                     <Route path="/skeleton-poster" element={<SkeletonPoster />} />
                     <Route path="/alien-cat" element={<AlienCat />} />
                     <Route path="/grain-and-glow" element={<GrainAndGlow />} />
+                    <Route path="/coming-soon" element={<InProgress />} />
+                    <Route path="/admin" element={<Admin />} />
                 </Routes>
 
                 <Footer />

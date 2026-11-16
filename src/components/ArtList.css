@@ -140,3 +140,204 @@
         grid-template-columns: 1fr;
     }
 }
+/* Artwork buttons */
+
+.art-image-button,
+.art-title-button {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #27433e;
+    cursor: pointer;
+}
+
+.art-image-button {
+    display: block;
+    width: 100%;
+}
+
+.art-title-button {
+    font: inherit;
+}
+
+.art-title-button:hover {
+    text-decoration: underline;
+}
+
+/* Match the Home page cards */
+
+.admin-page .art-card {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 12px;
+}
+
+.admin-page .art-image-button img {
+    width: 100%;
+    height: 210px;
+    padding: 0;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.admin-page .art-list {
+    align-items: start;
+}
+
+/* Details popup on every page */
+
+.art-card .art-popup {
+    width: calc(100% - 28px);
+    max-width: 600px;
+    max-height: 85vh;
+    padding: 0;
+    border: 0;
+    border-radius: 20px;
+    background: #e5e5e5;
+    color: #27433e;
+    overflow-y: auto;
+    overflow-wrap: anywhere;
+}
+
+.art-popup::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.art-card .art-popup-content {
+    padding: 25px;
+}
+
+.art-card .art-popup .popup-close {
+    display: block;
+    margin: 0 0 18px auto;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 20px;
+    background: #27433e;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+}
+
+.art-card .art-popup .popup-image {
+    width: 100%;
+    height: 280px;
+    padding: 8px;
+    border-radius: 12px;
+    background: #cacece;
+    object-fit: contain;
+}
+
+.art-card .art-popup .popup-description {
+    display: block;
+    color: #27433e;
+    font-size: 17px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+/* Manage Art form */
+
+.add-artwork {
+    margin-top: 35px;
+    padding: 30px;
+    border: 4px solid #27433e;
+    border-radius: 20px;
+    background-color: #e5e5e5;
+    color: #27433e;
+}
+
+.add-artwork h2 {
+    margin: 0 0 25px;
+    font-family: "Sail", serif;
+    font-size: 38px;
+    text-align: center;
+}
+
+.add-artwork .artwork-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.add-artwork .artwork-fields > div {
+    min-width: 0;
+}
+
+.add-artwork label {
+    display: block;
+    margin-bottom: 7px;
+    font-family: "Sail", serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.add-artwork input,
+.add-artwork select,
+.add-artwork textarea {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #27433e;
+    border-radius: 10px;
+    background-color: #cacece;
+    color: #1e332f;
+    font: inherit;
+}
+
+.add-artwork input:focus,
+.add-artwork select:focus,
+.add-artwork textarea:focus {
+    outline: 3px solid #899998;
+    outline-offset: 3px;
+}
+
+.add-artwork .artwork-description {
+    grid-column: 1 / -1;
+}
+
+.add-artwork textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.add-artwork button {
+    display: block;
+    margin: 25px auto 0;
+    padding: 12px 30px;
+    border: 0;
+    border-radius: 999px;
+    background-color: #27433e;
+    color: white;
+    font-family: "Sail", serif;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.add-artwork button:hover {
+    background-color: #1e332f;
+}
+
+.add-artwork button:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
+
+.add-artwork [role="status"] {
+    margin-bottom: 0;
+    color: #27433e;
+    font-weight: bold;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+    .add-artwork {
+        padding: 20px;
+    }
+
+    .add-artwork .artwork-fields {
+        grid-template-columns: 1fr;
+    }
+}

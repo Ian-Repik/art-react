@@ -1,75 +1,74 @@
 import { useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./ArtCard.css";
 
 function ArtCard(props) {
     const popup = useRef(null);
-    const location = useLocation();
 
-function showPopup(event) {
-    if (
-        event.ctrlKey ||
-        event.metaKey ||
-        event.shiftKey ||
-        event.altKey
-    ) {
-        return;
+    function showDetails() {
+        popup.current.showModal();
     }
-    if (location.pathname !== "/") {
-    return;
+
+    function closeDetails() {
+        popup.current.close();
     }
-    event.preventDefault();
-    popup.current.showModal();
-}
+
     return (
         <section className="art-card">
-            <Link to={props.link} onClick={showPopup}>
-    <img src={props.image} alt={props.alt} />
-            </Link>
+            <button
+                className="art-image-button"
+                type="button"
+                onClick={showDetails}
+                aria-label={`View ${props.title} details`}
+            >
+                <img src={props.image} alt={props.alt} />
+            </button>
 
             <h3>
-                <Link to={props.link}>{props.title}</Link>
+                <button
+                    className="art-title-button"
+                    type="button"
+                    onClick={showDetails}
+                >
+                    {props.title}
+                </button>
             </h3>
 
-            <p>{props.medium}</p>
+            <p>{props.medium} · {props.year}</p>
             <p>{props.description}</p>
+
             <dialog
-    className="art-popup"
-    ref={popup}
-    aria-label={props.title + " details"}
-    onClick={(event) => {
-        if (event.target === event.currentTarget) {
-            popup.current.close();
-        }
-    }}
-    onKeyDown={(event) => {
-        if (event.key === "Escape") {
-            popup.current.close();
-        }
-    }}
->
-    <div className="art-popup-content">
-        <h2>
-            <Link
-                to={props.link}
-                onClick={() => popup.current.close()}
+                className="art-popup"
+                ref={popup}
+                aria-label={`${props.title} details`}
             >
-                {props.title}
-            </Link>
-        </h2>
+                <div className="art-popup-content">
+                    <button
+                        className="popup-close"
+                        type="button"
+                        onClick={closeDetails}
+                        autoFocus
+                    >
+                        Close
+                    </button>
 
-        <p className="popup-description">
-             {props.popupDescription || props.description}
-        </p>
+                    <h2>{props.title}</h2>
 
-        <button
-            type="button"
-            onClick={() => popup.current.close()}
-        >
-            Close
-        </button>
-    </div>
-</dialog>
+                    <p className="popup-description">
+                        {props.medium} · {props.year}
+                    </p>
+
+                    <p className="popup-description">
+                        {props.popupDescription || props.description}
+                    </p>
+
+                    {props.link && (
+                        <Link to={props.link} onClick={closeDetails}>
+                            View Project Page
+                        </Link>
+                    )}
+                </div>
+            </dialog>
         </section>
     );
 }
