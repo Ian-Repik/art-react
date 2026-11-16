@@ -1,10 +1,18 @@
 import { useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./ArtCard.css";
 
 function ArtCard(props) {
     const popup = useRef(null);
+    const navigate = useNavigate();
 
+    function openArtwork() {
+    if (props.link) {
+        navigate(props.link);
+    } else {
+        showDetails();
+    }
+}
     function showDetails() {
         popup.current.showModal();
     }
@@ -16,11 +24,11 @@ function ArtCard(props) {
     return (
         <section className="art-card">
             <button
-                className="art-image-button"
-                type="button"
-                onClick={showDetails}
-                aria-label={`View ${props.title} details`}
-            >
+            className="art-image-button"
+            type="button"
+            onClick={openArtwork}
+            aria-label={`View ${props.title}`}
+>
                 <img src={props.image} alt={props.alt} />
             </button>
 
@@ -52,7 +60,15 @@ function ArtCard(props) {
                         Close
                     </button>
 
-                    <h2>{props.title}</h2>
+                    <h2>
+                        {props.link ? (
+                            <Link to={props.link} onClick={closeDetails}>
+                            {props.title}
+                            </Link>
+                         ) : (
+                    props.title
+    )}
+                    </h2>
 
                     <p className="popup-description">
                         {props.medium} · {props.year}
