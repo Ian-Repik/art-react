@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/art-react/static/css/main.b8536096.css",
-    "main.js": "/art-react/static/js/main.97350d54.js",
+    "main.js": "/art-react/static/js/main.355f49d8.js",
     "static/media/3906af61-7328-4282-b3ea-3c5945069ffb.png": "/art-react/static/media/3906af61-7328-4282-b3ea-3c5945069ffb.11b587c33c4b547e4527.png",
     "static/media/Firefly_RemoveBackground.png": "/art-react/static/media/Firefly_RemoveBackground.9f00a61ae2fa2d23dcc9.png",
     "static/media/IMG_5872.jpg": "/art-react/static/media/IMG_5872.81b4f74015797f88d2a9.jpg",
@@ -34,10 +34,10 @@
     "static/media/alien_cat.jpg": "/art-react/static/media/alien_cat.ba8a2af89080086315f3.jpg",
     "index.html": "/art-react/index.html",
     "main.b8536096.css.map": "/art-react/static/css/main.b8536096.css.map",
-    "main.97350d54.js.map": "/art-react/static/js/main.97350d54.js.map"
+    "main.355f49d8.js.map": "/art-react/static/js/main.355f49d8.js.map"
   },
   "entrypoints": [
     "static/css/main.b8536096.css",
-    "static/js/main.97350d54.js"
+    "static/js/main.355f49d8.js"
   ]
 }
