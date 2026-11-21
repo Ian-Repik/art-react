@@ -341,3 +341,29 @@
         grid-template-columns: 1fr;
     }
 }
+.artwork-item {
+    width: 100%;
+    max-width: 300px;
+}
+
+.artwork-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.artwork-actions button {
+    padding: 10px 22px;
+    border: 0;
+    border-radius: 20px;
+    background: #27433e;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+}
+
+.artwork-actions button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
